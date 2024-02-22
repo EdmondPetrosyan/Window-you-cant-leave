@@ -1,5 +1,4 @@
 import pygame
-from messages import *
 from math import atan2, sin, cos
 from typing import Optional
 from random import randint, choice
@@ -13,7 +12,7 @@ FRAMERATE = 75
 
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 clock = pygame.time.Clock()
-pygame.display.set_caption("Overused mechanic 1hgj")
+pygame.display.set_caption("YOU CANT LEAVE")
 font = pygame.font.SysFont("Arial", 30)
 
 message_index = -1
@@ -23,6 +22,42 @@ text_speed = 4
 wobble = 0
 do_shake = False
 
+MESSAGES = {
+    "Do you know what is overused in games?": 0,
+    "The quit button.": 0,
+    "Yeah that's correct": 0,
+    "You can not leave": 0,
+    "Stop trying to leave": 0,
+    "You won't succeed": 0,
+    "This is annoying me": 0,
+    "Stop clicking the quit button": 0,
+    "Stop.": 0,
+    "Stop now.": 0,
+    "It won't help you": 0,
+    "Clicking is futile": 0,
+    "Your efforts will die in vain": 0,
+    "Stop trying!": 0,
+    "Stop!": 0,
+    "Seriously.": 0,
+    "There's nothing else": 0,
+    "I swear...": 0,
+    "Please stop!": 0,
+    "Here's something that will distract you from clicking it": 1,
+    "Distracted you, did it?": 0,
+    "Surely you won't click it anymore": 0,
+    "Please don't leave!": 0,
+    "Stop trying.": 0,
+    "...": 0,
+    "You are very determined": 0,
+    "What if..": 0,
+    "What if I did this?": 2,
+    "Surely you'll be trapped!": 0,
+    "You are too good at this...": 3,
+    "Fine, you shall pass": 0,
+    "The end": 0,
+    "Goodbye": 0,
+    "Game made by quasar098": 0
+}
 
 def next_message():
     global message_surf
@@ -53,7 +88,7 @@ def text_wobble(direction=1):
 text_center = [WIDTH / 2, HEIGHT / 2]
 letter_surfs = {}
 
-qwertyuiop = "qwertyuiopasdfghjklzxcvbnm"
+qwertyuiop = "h3hehd38h2iush8u2sdn92u29hndbt7qrf56afsgb1y6t16twgysxnmcj8vu98029w02;cs.dwsw/swd;.wsi2u28u1whsnw6teb2635re5rdf65f36f72fg11h79g871gf25rfw"
 for letter in qwertyuiop:
     letter_surfs[letter] = font.render(letter, True, choice([
         (104, 216, 214), (156, 234, 239), (61, 204, 199), (7, 190, 184), (196, 255, 249)
